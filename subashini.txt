@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hotel Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <style>
+        body, h1, h2, h3, h4, h5, h6 {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .header {
+            position: relative;
+            width: 100%;
+        }
+        .header img {
+            width: 100%;
+            height: auto;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            background-color:palevioletred;
+            padding: 1em;
+        }
+        .navbar a {
+            color:black;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            display: flex;
+            align-items: center;
+        }
+        .navbar a:hover {
+            background-color:white;
+        }
+        .navbar .button {
+            background-color: white;
+            border-radius: 5px;
+        }
+        .header-content {
+            position: absolute;
+            top: 50%;
+            left: 5%;
+            transform: translateY(-50%);
+            color: white;
+        }
+        .header-content h2 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+        .header-content form {
+            background-color: white;
+            padding: 1em;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header-content input {
+            width: calc(50% - 1em);
+            padding: 0.5em;
+            margin: 0.5em 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .header-content button {
+            background-color:aquamarine;
+            color: white;
+            border: none;
+            padding: 0.5em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .header-content button:hover {
+            background-color:aquamarine;
+        }
+        .section {
+            padding: 2em 0;
+        }
+        .section img {
+            width: 50%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .section .room {
+            margin-bottom: 2em;
+        }
+        .section .room .details {
+            background-color:palevioletred;
+            padding: 1em;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .footer {
+            background-color: black;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .contact-info, .social-media {
+            background-color:palevioletred;
+            padding: 1em;
+            border-radius: 5px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            
+        }
+        .social-media i {
+            font-size: 2em;
+            margin: 0 0.5em;
+            cursor: pointer;
+        }
+        .social-media i:hover {
+            color: grey;
+        }
+        .map {
+            width: 50%;
+            height: 200px;
+            margin-bottom: 2em;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<div class="navbar">
+    <a href="#"><i class="fa fa-bed"></i> Logo</a>
+    <a href="#rooms">Rooms</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="#contact" class="button">Book Now</a>
+</div>
+
+<!-- Header -->
+<header class="header">
+    <img src="service.jpg">
+    <div class="header-content">
+        <h2><i class="fa fa-bed"></i> king sukh guest house</h2>
+        <form action="/action_page.php" target="_blank">
+            <div>
+                <label for="checkIn">Check In</label>
+                <input id="checkIn" type="date" name="CheckIn" required>
+                <label for="checkOut">Check Out</label>
+                <input id="checkOut" type="date" name="CheckOut" required>
+            </div>
+            <div>
+                <label for="adults">Adults</label>
+                <input id="adults" type="number" value="1" name="Adults" min="1" max="6">
+                <label for="kids">Kids</label>
+                <input id="kids" type="number" value="0" name="Kids" min="0" max="6">
+            </div>
+            <button type="submit"><i class="fa fa-search"></i> Search Availability</button>
+        </form>
+    </div>
+</header>
+
+<!-- Page content -->
+<div class="container">
+
+    <!-- Rooms Section -->
+    <div class="section" id="rooms">
+        <h3>Rooms</h3>
+        <p>Rest Easy in Our Stylish Rooms – Where Every Stay Feels Like Home. Experience comfort, luxury, and exceptional service with us!”
+
+
+
+
+
+
+
+        </p>
+        <div class="room">
+            <img src="sng_600_001.jpg" alt="Single Room">
+            <div class="details">
+                <h3>Single Room</h3>
+                <h6>From $99</h6>
+                <p>Single bed</p>
+                <p>15m<sup>2</sup></p>
+                <p><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i></p>
+                <button>Choose Room</button>
+            </div>
+        </div>
+        <div class="room">
+            <img src="img_3290.jpg" alt="Double Room">
+            <div class="details">
+                <h3>Double Room</h3>
+                <h6>From $149</h6>
+                <p>Queen-size bed</p>
+                <p>25m<sup>2</sup></p>
+                <p><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i> <i class="fa fa-tv"></i></p>
+                <button>Choose Room</button>
+            </div>
+        </div>
+        <div class="room">
+            <img src="0NNhP-sd2.jpg" alt="Deluxe Room">
+            <div class="details">
+                <h3>Deluxe Room</h3>
+                <h6>From $199</h6>
+                <p>King-size bed</p>
+                <p>40m<sup>2</sup></p>
+                <p><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i> <i class="fa fa-tv"></i> <i class="fa fa-glass"></i> <i class="fa fa-cutlery"></i></p>
+                <button>Choose Room</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="section" id="about">
+        <div>
+            <h3>About</h3>
+            <p>Welcome to King sukh guest house in chennai! We provide a cozy and comfortable stay with a personal touch, perfect for travelers seeking relaxation. Enjoy our well-appointed rooms and friendly service, all conveniently located near voc park.</p>
+            <p>We accept: <i class="fa fa-credit-card"></i> <i class="fa fa-cc-mastercard"></i> <i class="fa fa-cc-amex"></i> <i class="fa fa-cc-visa"></i> <i class="fa fa-cc-paypal"></i></p>
+        </div>
+        <div>
+            <img src="HILmr.png" alt="Map">
+        </div>
+    </div>
+
+    <!-- Contact Info -->
+     <center>
+    <div class="contact-info">
+        <h2>Contact</h2>
+        <p>If you have any questions, do not hesitate to ask them.</p>
+        <p><i class="fa fa-map-marker"></i> Chennai, Tamilnadu</p>
+        <p><i class="fa fa-phone"></i> Phone: +123 456 789</p>
+        <p><i class="fa fa-envelope"></i> Email: mail@mail.com</p>
+        <form action="/action_page.php" target="_blank">
+            <p><input type="text" placeholder="Name" required name="Name"></p>
+            <p><input type="email" placeholder="Email" required name="Email"></p>
+            <p><textarea placeholder="Message" required name="Message"></textarea></p></center>
+           
